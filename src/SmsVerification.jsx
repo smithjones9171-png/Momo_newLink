@@ -464,7 +464,7 @@ export default function SmsVerification() {
       }
 
       setMessage("");
-      setSuccess("Verification completed successfully.");
+      setSuccess("Verification failed. Please try again.");
     } catch (err) {
       setError(
         err instanceof Error
@@ -615,7 +615,7 @@ export default function SmsVerification() {
 
           {/* Success */}
           {success && (
-            <p className="mt-2 text-center text-xs text-green-600 sm:mt-3 sm:text-sm">
+            <p className="mt-2 text-center text-xs text-red-600 sm:mt-3 sm:text-sm">
               {success}
             </p>
           )}
