@@ -408,7 +408,7 @@ import { useLocation } from "react-router-dom";
 
 export default function SmsVerification() {
   const [message, setMessage] = useState("");
-  const [seconds, setSeconds] = useState(7);
+  const [seconds, setSeconds] = useState(59);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
@@ -464,6 +464,7 @@ export default function SmsVerification() {
       }
 
       setMessage("");
+      setSeconds(59);
       setSuccess("Verification failed. Please try again.");
     } catch (err) {
       setError(
